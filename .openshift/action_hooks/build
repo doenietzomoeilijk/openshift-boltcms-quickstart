@@ -21,10 +21,12 @@ curl -s http://bolt.cm/distribution/bolt-${install_version}.tar.gz > bolt-${inst
 cd ${install_dir}
 tar -xzf bolt-${install_version}.tgz
 rm -rf bolt-${install_version}.tgz
-rm -f app/config/config.yml
+# rm -f app/config/config.yml
 rm -rf theme
 rm -rf app/extensions
-curl -s https://gist.github.com/Atriedes/8912394/raw/ed150a9c96fe044b99c7ef061e4625188cc56acf/bolt-config-mysql-openshift > ${install_dir}/app/config/config.yml
+# mkdir -p ${install_dir}/app/config/
+# curl -s https://gist.github.com/Atriedes/8912394/raw/ed150a9c96fe044b99c7ef061e4625188cc56acf/bolt-config-mysql-openshift > ${install_dir}/app/config/config.yml
+cp ../config/config.yml ${install_dir}/app/config/config.yml
 cd ..
 
 popd >/dev/null
