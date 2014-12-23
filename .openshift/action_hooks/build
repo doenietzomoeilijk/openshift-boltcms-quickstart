@@ -14,7 +14,7 @@ install_dir=${OPENSHIFT_DATA_DIR}${install_version}
 mkdir -p ${install_dir}
 
 pushd ${install_dir} >/dev/null
-curl -s http://bolt.cm/distribution/bolt_${install_version}.tgz > bolt-${install_version}.tgz
+curl -s http://bolt.cm/distribution/bolt-${install_version}.tar.gz > bolt-${install_version}.tgz
 
 # Install Wordpress
 #
