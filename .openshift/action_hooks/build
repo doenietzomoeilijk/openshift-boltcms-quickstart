@@ -26,14 +26,14 @@ rm -rf theme
 rm -rf app/extensions
 # mkdir -p ${install_dir}/app/config/
 # curl -s https://gist.github.com/Atriedes/8912394/raw/ed150a9c96fe044b99c7ef061e4625188cc56acf/bolt-config-mysql-openshift > ${install_dir}/app/config/config.yml
-echo "OPENSHIFT_DATA_DIR: ${OPENSHIFT_DATA_DIR}"
-ls ${OPENSHIFT_DATA_DIR}
+echo "OPENSHIFT_HOME_DIR: ${OPENSHIFT_HOME_DIR}"
+ls ${OPENSHIFT_HOME_DIR}
 echo "OPENSHIFT_REPO_DIR: ${OPENSHIFT_REPO_DIR}"
 ls ${OPENSHIFT_REPO_DIR}
 echo "OPENSHIFT_DATA_DIR: ${OPENSHIFT_DATA_DIR}"
 ls ${OPENSHIFT_DATA_DIR}
 echo "install_dir: ${install_dir}"
-cp ${OPENSHIFT_DATA_DIR}config/config.yml ${install_dir}/app/config/config.yml
+cp ${OPENSHIFT_HOME_DIR}config/config.yml ${install_dir}/app/config/config.yml
 cd ..
 
 popd >/dev/null
